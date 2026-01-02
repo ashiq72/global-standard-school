@@ -56,8 +56,8 @@ export default function TeacherPage() {
                 {/* Image Placeholder */}
                 <div className="absolute inset-0 flex items-center justify-center text-gray-400 italic">
                   <Image
-                    src="https://bponi.sgp1.cdn.digitaloceanspaces.com/bponi/file/ea170051-a85b-4f6b-ae5a-c102d3c3a03c.jpg"
-                    alt="Faruk Hossain"
+                    src={teacher.image}
+                    alt={teacher.name}
                     fill
                     className="object-cover"
                     sizes="(max-width: 768px) 100vw, 33vw"
