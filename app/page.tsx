@@ -26,6 +26,7 @@ import { CurriculumJourney } from "./components/CurriculumJourney";
 import { SchoolClubs } from "./components/SchoolClubs";
 import { ResourceHub } from "./components/ResourceHub";
 import { PlayzoneSection } from "./components/PlayzoneSection";
+import Link from "next/link";
 
 // Feature Card এর জন্য টাইপ ডিফাইন করা
 interface FeatureCardProps {
@@ -87,10 +88,13 @@ export default function Home() {
           </p>
 
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <button className="bg-yellow-500 hover:bg-yellow-400 text-blue-950 px-10 py-4 rounded-full font-extrabold text-lg shadow-2xl hover:-translate-y-1 transition-all">
+            <Link
+              href="/admission"
+              className="bg-yellow-500 hover:bg-yellow-400 text-blue-950 px-10 py-4 rounded-full font-extrabold text-lg shadow-2xl hover:-translate-y-1 transition-all cursor-pointer"
+            >
               অনলাইনে ভর্তি ফরম
-            </button>
-            <button className="bg-white/10 backdrop-blur-md border border-white/30 hover:bg-white/20 px-10 py-4 rounded-full font-bold text-lg transition-all">
+            </Link>
+            <button className="bg-white/10 backdrop-blur-md border border-white/30 hover:bg-white/20 px-10 py-4 rounded-full font-bold text-lg transition-all cursor-pointer">
               বিস্তারিত জানুন
             </button>
           </div>
