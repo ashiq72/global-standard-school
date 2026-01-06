@@ -1,107 +1,157 @@
-import { FerrisWheel, Baby, Map, Puzzle, Ghost } from "lucide-react";
+import {
+  FerrisWheel,
+  Puzzle,
+  ShieldCheck,
+  Sparkles,
+  Star,
+  Heart,
+} from "lucide-react";
 
 export const PlayzoneSection = () => {
   const activities = [
     {
-      icon: <FerrisWheel size={32} />,
-      title: "আধুনিক রাইড",
-      desc: "শিশুদের জন্য নিরাপদ দোলনা, স্লাইড এবং সি-স।",
+      icon: FerrisWheel,
+      title: "মজার সব রাইডস",
+      desc: "দোলনা, স্লাইড এবং সি-স সহ আধুনিক ও নিরাপদ রাইড।",
+      color: "text-pink-500",
+      bg: "bg-pink-100",
+      border: "hover:border-pink-200",
     },
     {
-      icon: <Puzzle size={32} />,
-      title: "সৃজনশীল খেলা",
-      desc: "মেধা বিকাশের জন্য ইনডোর পাজল ও ব্লক গেমস।",
+      icon: Puzzle,
+      title: "ব্রেইন গেমস জোন",
+      desc: "মেধা বিকাশের জন্য কালারফুল পাজল, লেগো ও ব্লক গেমস।",
+      color: "text-sky-500",
+      bg: "bg-sky-100",
+      border: "hover:border-sky-200",
     },
     {
-      icon: <Ghost size={32} />,
-      title: "সফট প্লে-জোন",
-      desc: "সম্পূর্ণ ফ্লোর ম্যাট দিয়ে ঘেরা চোটমুক্ত খেলার জায়গা।",
+      icon: ShieldCheck,
+      title: "নিরাপদ সফট-ম্যাট",
+      desc: "পড়ে গিয়ে ব্যাথা পাওয়া রোধ করতে সম্পূর্ণ ফ্লোর ফোম দিয়ে মোড়ানো।",
+      color: "text-emerald-500",
+      bg: "bg-emerald-100",
+      border: "hover:border-emerald-200",
     },
   ];
 
   return (
-    <section className="py-24 bg-[#fffaf0] relative overflow-hidden">
-      {/* Decorative Floating Shapes */}
-      <div className="absolute top-10 left-10 w-20 h-20 bg-yellow-200 rounded-full opacity-30 blur-xl animate-pulse"></div>
-      <div className="absolute bottom-10 right-10 w-32 h-32 bg-pink-200 rounded-full opacity-30 blur-xl animate-pulse"></div>
+    <section className='py-24 bg-orange-50/50 relative overflow-hidden'>
+      {/* Background Doodles */}
+      <div className='absolute top-20 left-10 text-yellow-400 opacity-40 animate-spin-slow'>
+        <Star size={48} fill='currentColor' />
+      </div>
+      <div className='absolute bottom-20 right-10 text-pink-300 opacity-30 animate-bounce'>
+        <Heart size={48} fill='currentColor' />
+      </div>
+      <div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-yellow-100/50 rounded-full blur-3xl pointer-events-none'></div>
 
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <div className="flex flex-col lg:flex-row items-center gap-16">
-          {/* Left Side: Images Grid */}
-          <div className="lg:w-1/2 grid grid-cols-2 gap-4">
-            <div className="space-y-4 pt-12">
-              <div className="h-64 bg-orange-100 rounded-[3rem] border-4 border-white shadow-xl flex items-center justify-center overflow-hidden">
-                {/* Image placeholder */}
-                <div className="text-orange-300 font-bold rotate-12 uppercase">
-                  Fun Rides
+      <div className='max-w-7xl mx-auto px-6 relative z-10'>
+        <div className='flex flex-col lg:flex-row items-center gap-16 lg:gap-24'>
+          {/* Left Side: Photo Scrapbook Layout */}
+          <div className='lg:w-1/2 relative'>
+            <div className='grid grid-cols-2 gap-6 p-4'>
+              {/* Photo 1 */}
+              <div className='space-y-6 pt-8'>
+                <div className='relative h-60 bg-gradient-to-br from-rose-200 to-rose-100 rounded-[2rem] shadow-xl rotate-[-3deg] border-4 border-white flex items-center justify-center overflow-hidden group hover:rotate-0 transition-transform duration-500'>
+                  <span className='absolute top-4 left-1/2 -translate-x-1/2 w-16 h-4 bg-white/30 backdrop-blur-sm rotate-3'></span>
+                  <FerrisWheel
+                    size={64}
+                    className='text-rose-400 opacity-50 group-hover:scale-110 transition-transform'
+                  />
+                  <p className='absolute bottom-4 font-bold text-rose-400 uppercase tracking-widest text-sm'>
+                    Fun Time
+                  </p>
+                </div>
+                {/* Photo 2 */}
+                <div className='relative h-44 bg-gradient-to-br from-sky-200 to-sky-100 rounded-[2rem] shadow-xl rotate-[2deg] border-4 border-white flex items-center justify-center overflow-hidden group hover:rotate-0 transition-transform duration-500'>
+                  <Puzzle
+                    size={50}
+                    className='text-sky-400 opacity-50 group-hover:scale-110 transition-transform'
+                  />
                 </div>
               </div>
-              <div className="h-48 bg-blue-100 rounded-[2rem] border-4 border-white shadow-xl flex items-center justify-center overflow-hidden">
-                <div className="text-blue-300 font-bold -rotate-12 uppercase tracking-tighter">
-                  Kids Area
+
+              <div className='space-y-6'>
+                {/* Photo 3 */}
+                <div className='relative h-44 bg-gradient-to-br from-emerald-200 to-emerald-100 rounded-[2rem] shadow-xl rotate-[3deg] border-4 border-white flex items-center justify-center overflow-hidden group hover:rotate-0 transition-transform duration-500'>
+                  <ShieldCheck
+                    size={50}
+                    className='text-emerald-400 opacity-50 group-hover:scale-110 transition-transform'
+                  />
                 </div>
-              </div>
-            </div>
-            <div className="space-y-4">
-              <div className="h-48 bg-green-100 rounded-[2rem] border-4 border-white shadow-xl flex items-center justify-center overflow-hidden">
-                <div className="text-green-300 font-bold uppercase tracking-tighter">
-                  Indoor
-                </div>
-              </div>
-              <div className="h-64 bg-pink-100 rounded-[3rem] border-4 border-white shadow-xl flex items-center justify-center overflow-hidden">
-                <div className="text-pink-300 font-bold rotate-6 uppercase tracking-tighter">
-                  Happiness
+                {/* Photo 4 */}
+                <div className='relative h-60 bg-gradient-to-br from-amber-200 to-amber-100 rounded-[2rem] shadow-xl rotate-[-2deg] border-4 border-white flex items-center justify-center overflow-hidden group hover:rotate-0 transition-transform duration-500'>
+                  <span className='absolute -top-3 left-1/2 -translate-x-1/2 w-4 h-16 bg-white/30 backdrop-blur-sm rotate-90'></span>
+                  <Sparkles
+                    size={64}
+                    className='text-amber-400 opacity-50 group-hover:scale-110 transition-transform'
+                  />
+                  <p className='absolute bottom-4 font-bold text-amber-500 uppercase tracking-widest text-sm'>
+                    Magic
+                  </p>
                 </div>
               </div>
             </div>
           </div>
 
           {/* Right Side: Content */}
-          <div className="lg:w-1/2">
-            <div className="inline-block bg-yellow-100 text-yellow-700 px-6 py-2 rounded-full font-bold text-sm mb-6 border border-yellow-200">
-              🎈 কিডস জোন ও প্লে-গ্রাউন্ড
+          <div className='lg:w-1/2'>
+            <div className='inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-rose-100 text-rose-500 text-sm font-bold shadow-sm mb-6'>
+              <span className='animate-bounce'>🎈</span> কিডস জোন
             </div>
-            <h2 className="text-4xl md:text-5xl font-black text-blue-900 leading-tight mb-8">
-              খেলার ছলে <span className="text-pink-600">শেখার</span> এক আনন্দময়
-              ভুবন!
+
+            <h2 className='text-4xl md:text-5xl font-black text-slate-800 leading-[1.2] mb-6'>
+              খেলার ছলে{" "}
+              <span className='text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-orange-500'>
+                শেখার আনন্দ
+              </span>{" "}
+              <br />
+              প্রতিটি শিশুর অধিকার
             </h2>
-            <p className="text-gray-600 text-lg mb-10 leading-relaxed italic">
-              "গ্লোবাল স্ট্যান্ডার্ড স্কুলে আমরা বিশ্বাস করি প্রতিটি শিশুর শৈশব
-              হওয়া উচিত রঙিন। আমাদের সুরক্ষিত প্লে-জোনে শিক্ষার্থীরা পড়াশোনার
-              পাশাপাশি শারীরিক কসরত ও সামাজিক মেলামেশার সুযোগ পায়।"
+
+            <p className='text-slate-600 text-lg mb-10 leading-relaxed'>
+              গ্লোবাল স্ট্যান্ডার্ড স্কুলে আমরা বিশ্বাস করি প্রতিটি শিশুর শৈশব
+              হওয়া উচিত রঙিন। তাই আমাদের ক্যাম্পাসে রয়েছে বিশাল প্লে-গ্রাউন্ড,
+              যেখানে শিক্ষার্থীরা পড়াশোনার ফাঁকে নির্মল আনন্দ উপভোগ করতে পারে।
             </p>
 
-            <div className="space-y-6">
-              {activities.map((act, i) => (
-                <div key={i} className="flex items-start gap-5 group">
-                  <div className="w-14 h-14 bg-white rounded-2xl shadow-md flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300 shrink-0">
-                    {act.icon}
+            <div className='flex flex-col gap-4'>
+              {activities.map((act, i) => {
+                const Icon = act.icon;
+                return (
+                  <div
+                    key={i}
+                    className={`flex items-center gap-5 p-4 rounded-2xl bg-white border border-transparent transition-all duration-300 shadow-sm hover:shadow-lg hover:-translate-y-1 ${act.border}`}
+                  >
+                    <div
+                      className={`w-14 h-14 ${act.bg} ${act.color} rounded-xl flex items-center justify-center shrink-0`}
+                    >
+                      <Icon size={28} strokeWidth={2.5} />
+                    </div>
+                    <div>
+                      <h4 className='text-xl font-bold text-slate-800 mb-1'>
+                        {act.title}
+                      </h4>
+                      <p className='text-slate-500 text-sm font-medium'>
+                        {act.desc}
+                      </p>
+                    </div>
                   </div>
-                  <div>
-                    <h4 className="text-xl font-bold text-gray-800 mb-1">
-                      {act.title}
-                    </h4>
-                    <p className="text-gray-500 text-sm leading-relaxed">
-                      {act.desc}
-                    </p>
-                  </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         </div>
       </div>
 
-      {/* Ground Decoration - Svg Curve */}
-      <div className="absolute bottom-0 left-0 w-full leading-none">
-        <svg
-          className="relative block w-full h-[60px]"
-          viewBox="0 0 1200 120"
-          preserveAspectRatio="none"
-        >
+      {/* Wave SVG */}
+      <div className='absolute bottom-0 w-full leading-none text-white'>
+        <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 120'>
           <path
-            d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.43,147.3,126,214.34,108.33c67.04-17.67,114.16-41.1,172.05-51.89Z"
-            fill="#ffffff"
+            fill='currentColor'
+            fillOpacity='1'
+            d='M0,64L48,80C96,96,192,128,288,128C384,128,480,96,576,85.3C672,75,768,85,864,96C960,107,1056,117,1152,112C1248,107,1344,85,1392,74.7L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'
           ></path>
         </svg>
       </div>
